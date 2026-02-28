@@ -14,7 +14,7 @@ Attempt 2: ✅ SUCCESS (Response 200 OK) API call PASSED after 2 attempt(s).
 
 let attempt = 0;
 let maxAttempts = 5;
-//let success = false;
+
 
 do{
 	attempt++;
@@ -26,6 +26,5 @@ do{
 	} else{
 		console.log("Attempt " + attempt + " ✅ SUCCESS (Response 200 OK) API call PASSED after " + attempt + " attempt(s)");
         break;
-		//let success = true;
 	}
 }while (attempt < maxAttempts); 
