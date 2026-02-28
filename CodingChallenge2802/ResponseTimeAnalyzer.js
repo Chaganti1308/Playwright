@@ -22,18 +22,21 @@ Use comparison operators for min/max tracking.
 const responseTimes = [120, 230, 450, 510, 180, 620, 400, 280, 500, 333, 444];
 const SLA_LIMIT = 500;
 
+// total count of requests
 const totalRequests = responseTimes.length;
-let minResponseTime = responseTimes[0];
-let maxResponseTime = responseTimes[0];
+let minResponseTime = responseTimes[0]; // min response time initialized to first element of array
+let maxResponseTime = responseTimes[0]; //
 
+// initializing sum and breach count
 let sum = 0;
 let breachTickets = 0; 
 
 let i = 0;
 while(i < totalRequests){
 	currentResponseTime = responseTimes[i];
+    // checking for min and max response time with current response time
 	if(currentResponseTime < minResponseTime){
-		currentResponseTime = minResponseTime;
+		minResponseTime = currentResponseTime;
 	}
 	if(currentResponseTime > maxResponseTime){
 		maxResponseTime = currentResponseTime;
@@ -46,8 +49,10 @@ while(i < totalRequests){
 	i++;
 }
 
+// calculating average response time and breach percentage
 let avgResponseTime = sum/totalRequests;
 
+// calculating breach percentage
 let breachPercentage = (breachTickets/totalRequests) * 100;
 
 
