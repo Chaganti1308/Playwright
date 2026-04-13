@@ -6,7 +6,7 @@ However, for multiples of 3, print "Fizz" instead of the number, and for multipl
 For numbers that are multiples of both 3 and 5, print "FizzBuzz."
  */
 
-for (let n = 0; n <= 100; n++) {
+for (let n = 1; n <= 100; n++) {
     if (n % 3 == 0 && n % 5 == 0) {
         console.log("FizzBuzz");
     }

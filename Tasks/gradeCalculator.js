@@ -14,16 +14,26 @@ F: 0-59
  */
 
 
-let marks = 85;
-
-if (marks >= 90 && marks <= 100) {
-    console.log("Grade A");
-} else if (marks >= 80 && marks <= 89) {
-    console.log("Grade B");
-} else if (marks >= 70 && marks <= 79) {
-    console.log("Grade C");
-} else if (marks >= 60 && marks >= 69) {
-    console.log("Grade D");
-} else {
-    console.log("Fail");
+let marks = 185;
+let grade;
+if(typeof marks !== "number"){
+    console.log("It's NaN");
+    return;
 }
+if(marks < 0|| marks >100){
+    console.log("Marks should be from 0 --- 100");
+    return;
+    
+}
+if (marks >= 90 && marks <= 100) {
+    grade = "A";
+} else if (marks >= 80 && marks <= 89) {
+    grade = "B";
+} else if (marks >= 70 && marks <= 79) {
+    grade = "C";
+} else if (marks >= 60 && marks <= 69) {
+    grade = "D";
+} else {
+    grade = "F";
+}
+console.log(`For the score ${marks}, grade is : ${grade}`)
